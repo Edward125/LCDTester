@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LCDTester", "LCDTester\LCDTester.csproj", "{81F44FE8-78D6-41AB-A70F-ED9EF826204D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81F44FE8-78D6-41AB-A70F-ED9EF826204D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81F44FE8-78D6-41AB-A70F-ED9EF826204D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81F44FE8-78D6-41AB-A70F-ED9EF826204D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81F44FE8-78D6-41AB-A70F-ED9EF826204D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
