@@ -37,10 +37,10 @@
             this.tabCamera = new System.Windows.Forms.TabPage();
             this.tabDebug = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.hWindowControl1 = new HalconDotNet.HWindowControl();
-            this.txtImgFile = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnCreateRoi = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtImgFile = new System.Windows.Forms.TextBox();
+            this.hWindowControl1 = new HalconDotNet.HWindowControl();
             this.panelTitle.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabMain.SuspendLayout();
@@ -164,39 +164,6 @@
             this.splitContainer1.SplitterDistance = 735;
             this.splitContainer1.TabIndex = 0;
             // 
-            // hWindowControl1
-            // 
-            this.hWindowControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.hWindowControl1.BackColor = System.Drawing.Color.Black;
-            this.hWindowControl1.BorderColor = System.Drawing.Color.Black;
-            this.hWindowControl1.ImagePart = new System.Drawing.Rectangle(0, 0, 640, 480);
-            this.hWindowControl1.Location = new System.Drawing.Point(3, 0);
-            this.hWindowControl1.Name = "hWindowControl1";
-            this.hWindowControl1.Size = new System.Drawing.Size(729, 694);
-            this.hWindowControl1.TabIndex = 0;
-            this.hWindowControl1.WindowSize = new System.Drawing.Size(729, 694);
-            // 
-            // txtImgFile
-            // 
-            this.txtImgFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtImgFile.Location = new System.Drawing.Point(5, 32);
-            this.txtImgFile.Name = "txtImgFile";
-            this.txtImgFile.Size = new System.Drawing.Size(263, 23);
-            this.txtImgFile.TabIndex = 0;
-            this.txtImgFile.DoubleClick += new System.EventHandler(this.txtImgFile_DoubleClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "圖像文件:";
-            // 
             // btnCreateRoi
             // 
             this.btnCreateRoi.BackColor = System.Drawing.Color.Silver;
@@ -208,6 +175,40 @@
             this.btnCreateRoi.TabIndex = 2;
             this.btnCreateRoi.Text = "生成ROI";
             this.btnCreateRoi.UseVisualStyleBackColor = false;
+            this.btnCreateRoi.Click += new System.EventHandler(this.btnCreateRoi_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "圖像文件:";
+            // 
+            // txtImgFile
+            // 
+            this.txtImgFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtImgFile.Location = new System.Drawing.Point(5, 32);
+            this.txtImgFile.Name = "txtImgFile";
+            this.txtImgFile.Size = new System.Drawing.Size(263, 23);
+            this.txtImgFile.TabIndex = 0;
+            this.txtImgFile.DoubleClick += new System.EventHandler(this.txtImgFile_DoubleClick);
+            // 
+            // hWindowControl1
+            // 
+            this.hWindowControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hWindowControl1.BackColor = System.Drawing.Color.Black;
+            this.hWindowControl1.BorderColor = System.Drawing.Color.Black;
+            this.hWindowControl1.ImagePart = new System.Drawing.Rectangle(0, 0, 640, 480);
+            this.hWindowControl1.Location = new System.Drawing.Point(0, 0);
+            this.hWindowControl1.Name = "hWindowControl1";
+            this.hWindowControl1.Size = new System.Drawing.Size(732, 689);
+            this.hWindowControl1.TabIndex = 0;
+            this.hWindowControl1.WindowSize = new System.Drawing.Size(732, 689);
             // 
             // frmMain
             // 
@@ -248,10 +249,11 @@
         private System.Windows.Forms.TabPage tabCamera;
         private System.Windows.Forms.TabPage tabDebug;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private HalconDotNet.HWindowControl hWindowControl1;
         private System.Windows.Forms.TextBox txtImgFile;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCreateRoi;
+        private HalconDotNet.HWindowControl hWindowControl1;
+       // private HalconDotNet.HWindowControl hWindowControl1;
     }
 }
 

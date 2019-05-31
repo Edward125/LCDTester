@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 using Edward;
+using HalconDotNet;
 
 namespace LCDTester
 {
@@ -45,6 +46,7 @@ namespace LCDTester
 
         private bool IsRuning = false;
 
+       
 
         private void LoadUI()
         {
@@ -123,11 +125,35 @@ namespace LCDTester
             if (open.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 textbox.Text = open.FileName;
+               // DispImg(textbox.Text.Trim());
             }
 
 
 
         }
+
+        private void btnCreateRoi_Click(object sender, EventArgs e)
+        {
+            HDevelopExport HD = new HDevelopExport();
+            HD.RunHalcon(hWindowControl1.HalconWindow);
+            
+            
+           
+            
+        }
+
+
+        //private void DispImg(string imgpath)
+        //{
+        //    HObject ho_Image;
+        //    HTuple hv_Width = null, hv_Height = null;
+        //    HOperatorSet.ReadImage(out ho_Image, imgpath);
+        //    HOperatorSet.GetImageSize(ho_Image, out hv_Height, out hv_Height);
+        //    HOperatorSet.SetPart(hWindowControl1.HalconWindow, 0, 0, hv_Height , hv_Width );
+        //    HOperatorSet.DispObj(ho_Image, hWindowControl1.HalconWindow);
+        //    ho_Image.Dispose();
+
+        //}
 
 
 
