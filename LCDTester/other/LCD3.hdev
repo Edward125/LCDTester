@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.2" halcon_version="18.11.1.1">
+<procedure name="main">
+<interface/>
+<body>
+<l>dev_update_off()</l>
+<l>dev_close_window()</l>
+<l>dev_set_draw('margin')</l>
+<l>dev_set_color('blue')</l>
+<l>dev_set_line_width(3)</l>
+<l>*read_image(Image, 'D:/Work/LCD/LCD Pictures/昆山OK相片/1S20JES0YF07R90PMAL8_white.jpg')</l>
+<l>read_image(Image, 'D:/Work/LCD/LCD Pictures/昆山OK相片/lineNG_white.jpg')</l>
+<l>dev_open_window_fit_image(Image, 0, 0, -1, -1, WindowHandle)</l>
+<l>dev_display(Image)</l>
+<l>rgb3_to_gray(Image, Image, Image, ImageGray)</l>
+<l>mean_image(ImageGray, ImageMean, 9, 9)</l>
+<l>gray_histo(ImageMean,ImageMean, AbsoluteHisto, RelativeHisto)</l>
+<l>histo_to_thresh(RelativeHisto,20,MinThresh, MaxThresh)</l>
+<l>threshold(ImageMean, Region, MaxThresh[0],MaxThresh[1])</l>
+<l>area_center(Region, Area, Row, Column)</l>
+<l>orientation_region(Region, Phi3)</l>
+<l>rotate_image(ImageMean, ImageRotate1, -deg(Phi3), 'constant')</l>
+<l>*count_obj(Region, Number)</l>
+<l>dev_clear_window()</l>
+<l>*dev_display(Region)</l>
+<l>*dev_clear_obj(Region)</l>
+<l>threshold(ImageRotate1, Region, MaxThresh[0],MaxThresh[1])</l>
+<l>inner_rectangle1(Region, Row1, Column1, Row2, Column2)</l>
+<l>gen_rectangle1(Rectangle, Row1, Column1, Row2, Column2)</l>
+<l>reduce_domain(ImageRotate1, Rectangle, ImageReduced)</l>
+<l>crop_domain(ImageReduced, ImagePart)</l>
+<l>write_image(ImagePart, 'bmp', 0, 'C:/Users/D19040019/Desktop/test.bmp')</l>
+<c></c>
+<c></c>
+<c></c>
+</body>
+<docu id="main">
+<parameters/>
+</docu>
+</procedure>
+</hdevelop>
